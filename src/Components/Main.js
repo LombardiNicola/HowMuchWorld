@@ -7,8 +7,6 @@ export default class helloWorld extends Component {
   render() {
     return (
       <Fragment>
-        <Header />
-        /(/devo mettere svg)
         <Footer />
       </Fragment>
     )
