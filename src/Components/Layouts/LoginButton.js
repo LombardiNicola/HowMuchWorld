@@ -1,21 +1,17 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { withStyles } from "@material-ui/core/styles"
+import React, { Component } from "react"
 import Button from "@material-ui/core/Button"
+//import LoginDialog from "./LoginDialog"
 
-const styles = {}
+export default class LoginButton extends Component {
+  handleClick = () => {
+    console.log("login function")
+  }
 
-function LoginButton(props) {
-  const { classes } = props
-  return (
-    <Button variant="outlined" color="inherit">
-      Login
-    </Button>
-  )
+  render() {
+    return (
+      <Button onClick={this.handleClick()} variant="outlined" color="inherit">
+        Login
+      </Button>
+    )
+  }
 }
-
-LoginButton.propTypes = {
-  classes: PropTypes.object.isRequired
-}
-
-export default withStyles(styles)(LoginButton)

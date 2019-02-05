@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { withStyles } from "@material-ui/core/styles"
 import AppBar from "@material-ui/core/AppBar"
@@ -8,7 +8,6 @@ import IconButton from "@material-ui/core/IconButton"
 import Fab from "@material-ui/core/Fab"
 import MenuIcon from "@material-ui/icons/Menu"
 import EditIcon from "@material-ui/icons/Edit"
-import MoreIcon from "@material-ui/icons/MoreVert"
 import LoginButton from "./LoginButton"
 
 const styles = theme => ({
