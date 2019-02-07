@@ -8,7 +8,7 @@ import IconButton from "@material-ui/core/IconButton"
 import Fab from "@material-ui/core/Fab"
 import MenuIcon from "@material-ui/icons/Menu"
 import EditIcon from "@material-ui/icons/Edit"
-import LoginButton from "./LoginButton"
+import Login from "./Login"
 
 const styles = theme => ({
   appBar: {
@@ -47,7 +47,7 @@ function BottomAppBar(props) {
             <EditIcon />
           </Fab>
           <div>
-            <LoginButton />
+            <Login />
           </div>
         </Toolbar>
       </AppBar>
