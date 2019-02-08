@@ -5,33 +5,31 @@ import Dialog from "@material-ui/core/Dialog"
 import DialogActions from "@material-ui/core/DialogActions"
 import DialogContent from "@material-ui/core/DialogContent"
 //import DialogContentText from "@material-ui/core/DialogContentText"
-//import DialogTitle from "@material-ui/core/DialogTitle"
+import DialogTitle from "@material-ui/core/DialogTitle"
 
 export default class FormDialog extends React.Component {
   state = {
-    open: false
+    open: false,
+    isLogin: true
   }
 
   handleClickOpen = () => {
     this.setState({ open: true })
+    this.setState({ isLogin: true })
   }
 
   handleClose = () => {
     this.setState({ open: false })
   }
 
-  handleActive = () => {
+  handleActive = Transition => {
     this.setState({ open: false })
     /*TODO */
     console.log(document.getElementById("changeButtonDialog").innerText)
   }
 
   handleChange = () => {
-    let temp = document.getElementById("changeButtonDialog").innerText
-    document.getElementById(
-      "changeButtonDialog"
-    ).innerText = document.getElementById("activeButtonDialog").innerText
-    document.getElementById("activeButtonDialog").innerText = temp
+    this.setState({ isLogin: !this.state.isLogin })
   }
 
   render() {
@@ -42,14 +40,16 @@ export default class FormDialog extends React.Component {
           color="inherit"
           onClick={this.handleClickOpen}
         >
-          Login
+          Sign In
         </Button>
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}
           aria-labelledby="form-dialog-title"
         >
-          {/*<DialogTitle id="form-dialog-title">Login</DialogTitle>*/}
+          <DialogTitle id="form-dialog-title">
+            {this.state.isLogin ? "Sign In" : "Sign Up"}
+          </DialogTitle>
           <DialogContent>
             <TextField
               autoFocus
@@ -66,17 +66,19 @@ export default class FormDialog extends React.Component {
               type="password"
               fullWidth
             />
-            <TextField
-              margin="dense"
-              id="confirmPassword"
-              label="Confirm Your Password"
-              type="password"
-              fullWidth
-            />
+            {!this.state.isLogin && (
+              <TextField
+                margin="dense"
+                id="confirmPassword"
+                label="Confirm Your Password"
+                type="password"
+                fullWidth
+              />
+            )}
           </DialogContent>
           <DialogActions>
             <Button
-              id="cancelDialog"
+              id="cancelButtonDialog"
               onClick={this.handleClose}
               color="primary"
             >
@@ -87,7 +89,7 @@ export default class FormDialog extends React.Component {
               onClick={this.handleActive}
               color="primary"
             >
-              Login
+              {this.state.isLogin ? "Sign In" : "Sign Up"}
             </Button>
             <Button
               id="changeButtonDialog"
@@ -95,7 +97,7 @@ export default class FormDialog extends React.Component {
               variant="outlined"
               color="secondary"
             >
-              Sign up
+              {!this.state.isLogin ? "Sign In" : "Sign Up"}
             </Button>
           </DialogActions>
         </Dialog>

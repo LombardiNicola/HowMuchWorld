@@ -8,7 +8,7 @@ import IconButton from "@material-ui/core/IconButton"
 import Fab from "@material-ui/core/Fab"
 import MenuIcon from "@material-ui/icons/Menu"
 import EditIcon from "@material-ui/icons/Edit"
-import Login from "./Login"
+import Login from "../AccountRegistration/AccessDialogManager"
 
 const styles = theme => ({
   appBar: {
