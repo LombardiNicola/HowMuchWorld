@@ -7,7 +7,7 @@ import DialogContent from "@material-ui/core/DialogContent"
 //import DialogContentText from "@material-ui/core/DialogContentText"
 import DialogTitle from "@material-ui/core/DialogTitle"
 
-export default class FormDialog extends React.Component {
+export default class LoginFormDialog extends React.Component {
   state = {
     open: false,
     isLogin: true
@@ -38,7 +38,10 @@ export default class FormDialog extends React.Component {
         <Button
           variant="outlined"
           color="inherit"
-          onClick={this.handleClickOpen}
+          onClick={() => {
+            this.setState({ open: true })
+            this.setState({ isLogin: true })
+          }}
         >
           Sign In
         </Button>
