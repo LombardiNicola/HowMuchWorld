@@ -1,6 +1,6 @@
 import React, { Fragment } from "react"
 import { ReactComponent as Map } from "./media/world.svg"
-import Header from "./Components/Layouts/Header"
+import Header from "./Components/Header"
 
 let Main = () => (
   <Fragment>
