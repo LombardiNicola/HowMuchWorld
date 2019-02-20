@@ -38,7 +38,7 @@ const CustomAppBar = props => {
         </Toolbar>
       </AppBar>
       <Hamburger
-        open={!!drawer}
+        open={drawer}
         close={() => setDrawer(false)}
         swipeAreaWidth={0}
         disableDiscovery={true}
