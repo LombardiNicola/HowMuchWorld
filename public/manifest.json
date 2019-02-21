@@ -1,15 +1,17 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
-  ],
-  "start_url": ".",
+  "short_name": "How much world",
+  "name": "How much world",
+  "start_url": "https://lombardinicola.github.io/HowMuchWorld/",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "transparent",
+  "lang": "",
+  "orientation": "any",
+  "scope": "/HowMuchWorld/",
+  "icons": [
+    {
+      "src": "https://lombardinicola.github.io/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16"
+    }
+  ]
 }
